@@ -44,16 +44,16 @@ public class PostController {
 		return postServices.gettAllPosts();
 	}
 	
-//	@GetMapping()
-//	public PostResponse getAllPost(
-//			@RequestParam(value = "pageNo", defaultValue = AppConstants.DEFAUlT_PAGE_NUMBER, required = false) int pageNo,
-//			@RequestParam(value = "pageSize", defaultValue = AppConstants.DEFAUlT_PAGE_SIZE, required = false) int pageSize,
-//			@RequestParam(value = "sortby", defaultValue = AppConstants.DEFAUlT_SORT_BY, required = false) String sortBy,
-//			@RequestParam(value = "sortDir", defaultValue = AppConstants.DEFAUlT_SORT_DIRECTION, required = false) String sortDir
-//
-//	) {
-//		return postServices.gettAllPost(pageNo, pageSize, sortBy, sortDir);
-//	}
+	@GetMapping()
+	public PostResponse getAllPost(
+			@RequestParam(value = "pageNo", defaultValue = AppConstants.DEFAUlT_PAGE_NUMBER, required = false) int pageNo,
+			@RequestParam(value = "pageSize", defaultValue = AppConstants.DEFAUlT_PAGE_SIZE, required = false) int pageSize,
+			@RequestParam(value = "sortby", defaultValue = AppConstants.DEFAUlT_SORT_BY, required = false) String sortBy,
+			@RequestParam(value = "sortDir", defaultValue = AppConstants.DEFAUlT_SORT_DIRECTION, required = false) String sortDir
+
+	) {
+		return postServices.gettAllPost(pageNo, pageSize, sortBy, sortDir);
+	}
 
 	@GetMapping("/{id}")
 	public ResponseEntity<PostDto> getPostById(@PathVariable int id) {

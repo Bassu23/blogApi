@@ -9,7 +9,7 @@ import com.springboot.blogapi2.payload.PostResponse;
 public interface PostService {
 	public PostDto createPost(PostDto postDto);
 
-//	PostResponse gettAllPost(int pageNo, int pageSize, String sortBy, String sortDir);
+	PostResponse gettAllPost(int pageNo, int pageSize, String sortBy, String sortDir);
 
 	PostDto getPostById(int id);
 
